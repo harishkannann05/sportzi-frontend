@@ -1,0 +1,79 @@
+header {
+  width: 100%;
+  padding: 18px 0;
+  background: transparent;
+  backdrop-filter: blur(0px);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  transition: backdrop-filter 0.3s ease, background 0.3s ease;
+}
+
+header.scrolled {
+  transition: 0.3s;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.082);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #eef0f5;
+  text-decoration: none;
+}
+
+.logo:hover {
+  color: #999999;
+  text-shadow: 0 10px 25px rgba(10, 48, 216, 0.3);
+}
+
+.logo.scrolled {
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.logo.scrolled:hover {
+  color: #9999;
+  text-shadow: 0 10px 25px rgba(10, 48, 216, 0.3);
+
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-login,
+.btn-signup {
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+  background: #060606;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn-login:hover,
+.btn-signup:hover {
+  background: rgba(0, 0, 0, 0.179);
+  color: #000;
+  box-shadow: 0 10px 25px rgba(10, 48, 216, 0.3);
+  transform: translateY(-2px);
+}

@@ -1,0 +1,57 @@
+/* ================= FOOTER ================= */
+
+.footer {
+    margin-top: -80px;
+    /* ✅ no negative margin */
+    padding: 25px 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 10;
+    /* ✅ ensures clickable */
+}
+
+/* Footer heading */
+.footer p {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #111;
+}
+
+/* Icon container */
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+}
+
+/* Anchor reset */
+.footer-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Icon images */
+.footer-icons a img {
+    width: 26px;
+    height: 26px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover animation */
+.footer-icons a:hover img {
+    transform: scale(1.35);
+    filter: drop-shadow(0 10px 25px rgba(10, 48, 216, 0.3));
+}
+
+/* Optional copyright text */
+.footer span {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #555;
+}
