@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./css/nav.css";
 
-export default function nav() {
-
+export default function Nav() {
   useEffect(() => {
     const handleScroll = () => {
       const header = document.querySelector("header");
@@ -25,11 +25,11 @@ export default function nav() {
     <header>
       <div className="container">
         <div className="header-row">
-          <a className="logo" href="#">Sportzi</a>
+          <Link to="/" className="logo">SPORTZI</Link>
 
           <div className="header-buttons">
-            <a className="btn-login" href="http://localhost/DBMS/login.php">Login</a>
-            <a className="btn-signup" href="/signup">Sign Up</a>
+            <Link to="/login" className="btn-login">Login</Link>
+            <Link to="/signup" className="btn-signup">Sign Up</Link>
           </div>
         </div>
       </div>

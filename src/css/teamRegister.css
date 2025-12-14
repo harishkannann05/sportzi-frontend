@@ -1,0 +1,158 @@
+/* ================= TEAM REGISTER PAGE ================= */
+
+.team-register-page {
+  min-height: 120vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+
+  /* FREE SPACE AROUND CARD */
+  padding: 80px 40px;
+
+  background: linear-gradient(
+    to right,
+    #1a1a1a 0%,
+    #1a1a1a 40%,
+    #f7f9f3 40%,
+    #f7f9f3 100%
+  );
+}
+
+/* LEFT BACKGROUND IMAGE */
+.team-register-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/sports_game2.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 40%;
+  opacity: 0.9;
+  z-index: 0;
+}
+
+/* ================= CARD ================= */
+
+.team-register-card {
+  position: relative;
+  z-index: 1;
+
+  background: #d4d4d4;
+  width: 100%;
+  max-width: 420px;
+  padding: 42px;
+  border-radius: 14px;
+  text-align: center;
+
+  /* FREE SPACE FROM IMAGE */
+  margin-left: 60px;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  animation: fadeUp 0.6s ease;
+}
+
+/* ================= TEXT ================= */
+
+.team-register-title {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.team-register-sub {
+  font-size: 14px;
+  margin-bottom: 28px;
+  color: #333;
+}
+
+/* ================= FORM ================= */
+
+.team-register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.team-register-form input,
+.team-register-form select {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  background: #fff;
+}
+
+.team-register-form input:hover,
+.team-register-form select:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ================= BUTTON ================= */
+
+.team-register-form button {
+  margin-top: 16px;
+  padding: 13px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+
+  background: #060606;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.team-register-form button:hover {
+  background: #000;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(10, 48, 216, 0.3);
+}
+
+/* ================= FOOTER TEXT ================= */
+
+.team-register-footer {
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.team-register-footer a {
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+}
+
+.team-register-footer a:hover {
+  color: #0a30d8;
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .team-register-page {
+    padding: 50px 20px;
+  }
+
+  .team-register-page::before {
+    background-size: 0;
+  }
+
+  .team-register-card {
+    margin-left: 0;
+  }
+}

@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
 import "./css/App.css";
 import "./css/about.css";
 import "./css/bg.css";
@@ -11,9 +13,9 @@ import coachimg from "./assets/coach.png";
 
 
 import Footer from "./footer";  // <-- Add this
-import Nav from "./nav";  // <-- Add this
 
 export default function App() {
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,7 +23,7 @@ export default function App() {
       const extraContent = document.querySelector(".extra-content");
       const aboutGrid = document.querySelector(".about-grid");
 
-      if (window.scrollY > 100) {
+      if (window.scrollY > 80) {
         scrollText.classList.add("hide");
         extraContent.classList.add("show");
       } else {
@@ -42,7 +44,8 @@ export default function App() {
 
   return (
     <>
-      <Nav />   {/* <-- Navbar imported */}
+
+
 
       <div className="hero-layout">
 
@@ -59,12 +62,12 @@ export default function App() {
             <p className="hero-sub">Your All-in-One Sports Management System</p>
 
             <div className="hero-buttons">
-              <button className="btn btn-primary">Create Your Team</button>
+              <button className="btn btn-primary" onClick={() => navigate("/team-register")}>Create Your Team</button>
             </div>
           </section>
           <section className="extra-section">
             <div className="extra-content hidden">
-              <p>If you have any questions, feel free to reach out!</p>
+              <p>If you haven’t created a team yet, please create one before choosing your role.</p>
 
               {/* ROLE SELECTION SECTION */}
 
@@ -88,8 +91,8 @@ export default function App() {
                         {/* BACK */}
                         <div className="card-back">
                           <h4>Player</h4>
-                          <button>Login</button>
-                          <button>Register</button>
+                          <button onClick={() => navigate("/login")}>Login</button>
+                          <button onClick={() => navigate("/signup")}>Register</button>
                         </div>
 
                       </div>
@@ -104,8 +107,8 @@ export default function App() {
                         </div>
                         <div className="card-back">
                           <h4>Coach</h4>
-                          <button className="white">Login</button>
-                          <button className="black">Register</button>
+                          <button className="white" onClick={() => navigate("/login")}>Login</button>
+                          <button className="black" onClick={() => navigate("/signup")}>Register</button>
                         </div>
                       </div>
                     </div>
@@ -119,8 +122,8 @@ export default function App() {
                         </div>
                         <div className="card-back">
                           <h4>Admin</h4>
-                          <button>Login</button>
-                          <button>Register</button>
+                          <button onClick={() => navigate("/login")}>Login</button>
+                          <button onClick={() => navigate("/team-register")}>Register</button>
                         </div>
                       </div>
                     </div>
