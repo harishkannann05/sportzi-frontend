@@ -11,7 +11,6 @@ import playerimg from "./assets/player.png";
 import ownerimg from "./assets/owner.png";
 import coachimg from "./assets/coach.png";
 
-
 import Footer from "./footer";  // <-- Add this
 
 export default function App() {
